@@ -1,25 +1,32 @@
 package optional;
 
+import javax.swing.JOptionPane;
+
 public class BirthdayReminder {
 
 	public static void main(String[] args) {
-		
-		// 1. correct the birthdays for your family below
-		String momsBirthday = "January 24th";
-		String dadsBirthday = "June 9th";
-		String myBirthday = "April 16th";
 
-		// 2. Find out which birthday the user wants and and store their response in a variable
-	
-		// 3. Print out what the user typed
-		
-		// 4. if user asked for "mom"
-			//print mom's birthday
-		// 5. if user asked for "dad"
-			// print dad's birthday
-		// 6. if user asked for your name
-			// print myBirthday
-		//7. otherwise print "Sorry, i don't remember that person's birthday!"
+		String momsBirthday = "December 24th";
+		String dadsBirthday = "September 2nd";
+		String myBirthday = "July 7th";
+
+		String answer = JOptionPane.showInputDialog("Who's birthday do you want to know?");
+
+		System.out.println(answer);
+
+		if (answer.equals("mom")) {
+
+			JOptionPane.showMessageDialog(null, answer + "'s" + " birthday is " + momsBirthday);
+		} else if (answer.equals("dad")) {
+
+			JOptionPane.showMessageDialog(null, answer + "'s" + " birthday is " + dadsBirthday);
+		} else if (answer.equals("yours")) {
+
+			JOptionPane.showMessageDialog(null, "My birthday is " + myBirthday);
+		} else {
+
+			JOptionPane.showMessageDialog(null, "Sorry, i don't remember that person's birthday!");
+		}
 
 	}
 }
